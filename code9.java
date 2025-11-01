@@ -1,27 +1,21 @@
-// Logical Operation
+//Exception Null pointer
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-      // Logical Operation : &&and ,||or ,!not
-       int a,b;
+        try
+        {
+            String str ="amit";
+            int x = Integer.parseInt(str);
 
-       Scanner sc = new Scanner(System.in);
+        }
+        catch(NumberFormatException ex)
+        {
+            System.out.println(ex.getMessage());
+            System.out.println("your cannot strint to interger ");
 
-       System.out.println("Enter your Number");
-
-       a = sc.nextInt();
-       b = sc.nextInt();
-
-       System.out.println("&&"+(a>b && a<b)); // any condition false then output false
-       System.out.println("||"+(a<b || a>b)); // any condition True than output Ture
-       System.out.println("!"+(a>=b && b>a)); // condition false then output change true
-     
-       
-
-
-
-
+        }        
+        
     }
 }

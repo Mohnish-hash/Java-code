@@ -1,27 +1,38 @@
-// Print Even odd number
+//throws use excaption
 import java.util.Scanner;
-class demo
+class A
 {
-    public static void main(String[] args)
+    public static void divsion(int a,int b) throws Exception
     {
-        int num;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your Number ");
-        num= sc.nextInt();
-      
-
-        if(num%2==0)
+        int c ;
+        if(b==0)
         {
-            System.out.println("Number is even");
+            throw new Exception("Input value greater then zero");
+
         }
-        //if(num%2 !=0)
-           // System.out.println(" Number is odd");
         else
         {
-            System.out.println("Number is odd");
+            c = a/b;
+            System.out.println("value is = "+c);
         }    
-
-
-
     }
+    public static void main(String[] args)
+    {
+    Scanner sc =new Scanner(System.in);
+    int a,b;
+    System.out.println("Enter the Numbers");
+    a = sc.nextInt();
+    b = sc.nextInt();
+
+    try
+    {
+        divsion(a,b);
+    }
+    catch(Exception ex)
+    {
+        System.out.println(ex.getMessage());
+    }
+  } 
+
+
 }

@@ -1,19 +1,23 @@
-// If satatment
+//finally
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-        int a,b;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your Number ");
-        a = sc.nextInt();
-        b = sc.nextInt();
+        System.out.println("Enter your age");
+        int age =sc.nextInt();
 
-        if(a>b)
-            System.out.println("This a is maximum");
-        if(a<b)
-            System.out.println("This b is maximum");
-
+        try
+        {
+            if(age>=18)
+                System.out.println("You can vote");
+            else
+                throw new Exception("you cant vote");
+        }  
+        catch(Exception ex)
+        {
+            System.out.println(ex.getMessage());
+        }
     }
 }

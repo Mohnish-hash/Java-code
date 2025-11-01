@@ -1,27 +1,25 @@
-// If else statement
+//try catch number check postive negative zero
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-        int age;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your Number ");
-        age = sc.nextInt();
-      
+        System.out.println("Enter your Number");
+        int num =sc.nextInt();
 
-        if(age>18)
+        try
         {
-            System.out.println("You can vote");
+            if(num>0)
+                System.out.println("postive");
+            else if(num<0)
+                throw new Exception("Negative value");
+            else
+                System.out.println("zero");
+        }  
+        catch(Exception ex)
+        {
+            System.out.println(ex.getMessage());
         }
-        //if(age<18)
-           // System.out.println("you can not vote");
-        else
-        {
-            System.out.println("You can not vote");
-        }    
-
-
-
     }
 }

@@ -1,29 +1,21 @@
-// Realtion Operation
+//Exception Null pointer
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-      // Relation Operation : >,<,<=,>,==,!=
-       int a,b;
+        try
+        {
+            String str =null;
+            System.out.println(str.length());
 
-       Scanner sc = new Scanner(System.in);
+        }
+        catch(NullPointerException ex)
+        {
+            System.out.println(ex.getMessage());
+            System.out.println("Your value is null ");
 
-       System.out.println("Enter your Number");
-
-       a = sc.nextInt();
-       b = sc.nextInt();
-
-       System.out.println("<"+(a<b));
-       System.out.println(">"+(a>b));
-       System.out.println("<="+(a<=b));
-       System.out.println(">="+(a>=b));
-       System.out.println("=="+(a==b));
-       System.out.println("!="+(a!=b));
-       
-
-
-
-
+        }        
+        
     }
 }

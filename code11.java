@@ -1,41 +1,30 @@
-// increment / Decrement
+//Class exception 
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-      // Increment Decrement :
-      // ++variablename : preincrement
-      // variablename++ : postincrement
-      // --variablename : preincrement
-      // variablename-- : postincrement
+        try
+        {
+            try
+            {
+            String str ="amit";
+            int x = Integer.parseInt(str);
+            }
+            catch(Exception ex)
+            {
+              System.out.println(ex.getMessage());  
+            }
 
-       int a,b;
+            int arr[]=new int[5];
+            System.out.println(arr[20]);
 
-       Scanner sc = new Scanner(System.in);
+        }
+        catch(Exception ex)
+        {
+            System.out.println(ex.getMessage());
 
-       System.out.println("Enter your Number");
-
-       a = 8;
-       b = ++a;
-       //c = ++b;
-       //d = (++a + ++a);
-       //e = (--b + --d - ++c);
-
-
-
-
-       System.out.println(""+b);
-       //System.out.println(""+c);
-       //System.out.println(""+d);
-       //System.out.println(""+e);
-
-       
-      
-       
-
-
-
-
+        }        
+        
     }
 }

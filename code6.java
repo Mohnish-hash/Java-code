@@ -1,26 +1,24 @@
-// print name,age,salar
+//Exception Arithematic
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-       String name;
-       int age;
-       float salary;
+        try
+        {
+            int a,b,c;
+            Scanner sc = new Scanner(System.in);
+            a = sc.nextInt();
+            b = sc.nextInt();
+            c = a/b;
+            System.out.println(c);
+        }
+        catch(ArithmeticException ex)
+        {
+            System.out.println(ex.getMessage());
+            System.out.println("Do not enter zero this is invaild");
 
-       Scanner sc = new Scanner(System.in);
-
-       System.out.println("Enter your name ");
-       name = sc.nextLine();
-       System.out.println("Enter your age ");
-       
-       age = sc.nextInt();
-       System.out.println("Enter your salary ");
-       salary = sc.nextFloat();
-
-       System.out.println("My name is "+name);
-       System.out.println("MY age "+age);
-       System.out.println("My salary"+salary);
-
+        }        
+        
     }
 }

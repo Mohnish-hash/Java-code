@@ -1,16 +1,41 @@
-// Condition Operation
+//finally
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-      // Condition operation : 
-      // value=condition?trueblock:falseblock;
+        
+        try
+        {
+        String str ="amit";
+        int x = Integer.parseInt(str);
+        }
+        catch(NumberFormatException ex)
+        {
+           System.out.println(ex.getMessage());  
+        }
+        finally
+        {
+            System.out.println("outer Finally");
+            try
+            {
+                int arr[] = new int[5];
+                System.out.println(arr[32]);
 
-      int a =10 ,b =50 ,c;
-      c = a>b?100:200;
-      System.out.println(""+c);
+            }
+            catch(Exception ex)
+            {
+                System.out.println(ex.getMessage());
+            }
+            finally
+            {
+                System.out.println("inner finally");
+            }
+        }
 
+       
 
+               
+        
     }
 }

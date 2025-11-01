@@ -1,26 +1,21 @@
-// Arthimatic Opertaion
+//Exception Arrayindexofbound
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-      //Arthimatic Operator : +,-,*,%,/
-       int a,b;
+        try
+        {
+            int arr[]=new int[5];
+            System.out.println(arr[10]);
 
-       Scanner sc = new Scanner(System.in);
+        }
+        catch(ArrayIndexOutOfBoundsException ex)
+        {
+            System.out.println(ex.getMessage());
+            System.out.println("you insert array index 5 ");
 
-       System.out.println("Enter your Number");
-
-       a = sc.nextInt();
-       b = sc.nextInt();
-
-       System.out.println("Addation + = "+(a+b));
-       System.out.println("Subtraction -="+(a-b));
-       System.out.println("Multiply * ="+(a*b));
-       System.out.println("Division / ="+(a/b));
-       System.out.println("Modu % ="+(a%b));
-
-
-
+        }        
+        
     }
 }

@@ -1,29 +1,30 @@
-// Assignment operation
+//try catch nesting 
 import java.util.Scanner;
 class demo
 {
     public static void main(String[] args)
     {
-      // Assignment Operation : =,+=,-+,*=,/=,%=
-       int a,b;
+        try
+        {
+            try
+            {
+            String str ="amit";
+            int x = Integer.parseInt(str);
+            }
+            catch(NumberFormatException ex)
+            {
+              System.out.println(ex.getMessage());  
+            }
 
-       Scanner sc = new Scanner(System.in);
+            int arr[]=new int[5];
+            System.out.println(arr[20]);
 
-       System.out.println("Enter your Number");
+        }
+        catch(ArrayIndexOutOfBoundsException ex)
+        {
+            System.out.println(ex.getMessage());
 
-       a = sc.nextInt();
-       b = sc.nextInt();
-
-       System.out.println("="+(a=b));
-       System.out.println("+="+(a+=b));
-       System.out.println("-="+(a-=b));
-       System.out.println("*="+(a*=b));
-       System.out.println("/="+(a/=b));
-       System.out.println("%="+(a%=b));
-       
-
-
-
-
+        }        
+        
     }
 }

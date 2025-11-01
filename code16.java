@@ -1,34 +1,37 @@
-// salary bouns print question
 import java.util.Scanner;
-class demo
+class A
 {
-    public static void main(String[] args)
+    public static void divsion(int a,int b) throws Exception
     {
-        int salary,bonus,total;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your Number ");
-        salary = sc.nextInt();
-      
-
-        if(salary>5000)
+        int c ;
+        if(b==0)
         {
-            bonus =salary*20/100;
-            total = salary+bonus;
-            System.out.println("Totals"+total);
+            throw new Exception("Input value greater then zero");
+
         }
-        //if(salary<5000)
-           // bonus =salary*20/100;
-            //total = salary+bonus;
-            //System.out.println("Totals"+total);
         else
         {
-            bonus =salary*10/100;
-            total = salary + bonus;
-            System.out.println("Totals"+total);
-            
+            c = a/b;
+            System.out.println("value is = "+c);
         }    
-
-
-
     }
+    public static void main(String[] args)
+    {
+    Scanner sc =new Scanner(System.in);
+    int a,b;
+    System.out.println("Enter the Numbers");
+    a = sc.nextInt();
+    b = sc.nextInt();
+
+    try
+    {
+        divsion(a,b);
+    }
+    catch(Exception ex)
+    {
+        System.out.println(ex.getMessage());
+    }
+  } 
+
+
 }
